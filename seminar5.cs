@@ -119,70 +119,70 @@
 
 // // Задача 36: ---Конец--------------------------------------------------------------
 
-// Задача 38: ---Начало--------------------------------------------------------------
+// // Задача 38: ---Начало--------------------------------------------------------------
 
-// Задача 38: 
-// Задайте массив вещественных чисел. 
-// Найдите разницу между максимальным и минимальным элементов массива.
-// [3 7 22 2 78] -> 76
+// // Задача 38: 
+// // Задайте массив вещественных чисел. 
+// // Найдите разницу между максимальным и минимальным элементов массива.
+// // [3 7 22 2 78] -> 76
 
-Console.WriteLine("Задача 38\n Задайте массив вещественных чисел.\n Найдите разницу между максимальным и минимальным элементов массива.");
-Console.WriteLine();
-Console.WriteLine("Решение");   
-Console.WriteLine();
+// Console.WriteLine("Задача 38\n Задайте массив вещественных чисел.\n Найдите разницу между максимальным и минимальным элементов массива.");
+// Console.WriteLine();
+// Console.WriteLine("Решение");   
+// Console.WriteLine();
 
-int [] CreatMyArray  (int size, int minValue, int maxValue)
-{
-    int[] myArray = new int [size];
-    for (int i =0; i < size; i++)
-    {
-      myArray[i] = new Random().Next(minValue, maxValue);
+// int [] CreatMyArray  (int size, int minValue, int maxValue)
+// {
+//     int[] myArray = new int [size];
+//     for (int i =0; i < size; i++)
+//     {
+//       myArray[i] = new Random().Next(minValue, maxValue);
 
-    }
+//     }
 
-    return myArray;
+//     return myArray;
 
-}
+// }
 
-int differenceBetweenMaxMinEementsArray = 0;
+// int differenceBetweenMaxMinEementsArray = 0;
 
-void ShowArray(int[] myShowArray)
-{
-     int maxValue = 0;
-     int minValue = myShowArray[0];
+// void ShowArray(int[] myShowArray)
+// {
+//      int maxValue = 0;
+//      int minValue = myShowArray[0];
      
-     for(int i=0; i < myShowArray.Length; i++)
-    {
-       Console.Write(myShowArray[i] + " ");
+//      for(int i=0; i < myShowArray.Length; i++)
+//     {
+//        Console.Write(myShowArray[i] + " ");
 
-       if (maxValue < myShowArray[i])
-       {  
-        maxValue = myShowArray[i];    
-       }          
+//        if (maxValue < myShowArray[i])
+//        {  
+//         maxValue = myShowArray[i];    
+//        }          
 
-       if (minValue > myShowArray[i])
-       {  
-        minValue = myShowArray[i];    
-       }          
+//        if (minValue > myShowArray[i])
+//        {  
+//         minValue = myShowArray[i];    
+//        }          
           
-       differenceBetweenMaxMinEementsArray = maxValue - minValue;                    
-    }
+//        differenceBetweenMaxMinEementsArray = maxValue - minValue;                    
+//     }
   
-    Console.WriteLine();
-    Console.WriteLine("Максимальное значение эелементов массива равно " + maxValue);
-    Console.WriteLine("Минимальное значение эелементов массива равно " + minValue);  
-    Console.WriteLine("Разность равна " + differenceBetweenMaxMinEementsArray); 
-}
+//     Console.WriteLine();
+//     Console.WriteLine("Максимальное значение эелементов массива равно " + maxValue);
+//     Console.WriteLine("Минимальное значение эелементов массива равно " + minValue);  
+//     Console.WriteLine("Разность равна " + differenceBetweenMaxMinEementsArray); 
+// }
 
-Console.Write("Введите размер массива ");
-int sizeArray = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальный диапазон массива ");
-int minValueArray = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальный диапазон массива ");
-int maxValueArray = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите размер массива ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальный диапазон массива ");
+// int minValueArray = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальный диапазон массива ");
+// int maxValueArray = Convert.ToInt32(Console.ReadLine());
 
-int [] fillingArray = CreatMyArray(sizeArray, minValueArray, maxValueArray);
+// int [] fillingArray = CreatMyArray(sizeArray, minValueArray, maxValueArray);
 
-ShowArray(fillingArray);
+// ShowArray(fillingArray);
 
-// Задача 38: ---Конец--------------------------------------------------------------
+// // Задача 38: ---Конец--------------------------------------------------------------
