@@ -60,23 +60,83 @@
 
 // // Задача 36: ---Начало--------------------------------------------------------------
 
-// Задача 36: 
-// Задайте одномерный массив, заполненный случайными числами. 
-// Найдите сумму элементов, стоящих на нечётных позициях.
-// [3, 7, 23, 12] -> 19
-// [-4, -6, 89, 6] -> 0
+// // Задача 36: 
+// // Задайте одномерный массив, заполненный случайными числами. 
+// // Найдите сумму элементов, стоящих на нечётных позициях.
+// // [3, 7, 23, 12] -> 19
+// // [-4, -6, 89, 6] -> 0
 
-Console.WriteLine("Задача 36\n Задайте одномерный массив, заполненный случайными числами..\n Найдите сумму элементов, стоящих на нечётных позициях..");
+// Console.WriteLine("Задача 36\n Задайте одномерный массив, заполненный случайными числами.\n Найдите сумму элементов, стоящих на нечётных позициях.");
+// Console.WriteLine();
+// Console.WriteLine("Решение");   
+// Console.WriteLine();
+
+// int [] CreatMyArray  (int size)
+// {
+//     int[] myArray = new int [size];
+//     for (int i =0; i < size; i++)
+//     {
+//       myArray[i] = new Random().Next(0, size);
+
+//     }
+
+//     return myArray;
+
+// }
+
+// int sumOfElementsInOddPositions=0;
+
+// void ShowArray(int[] myShowArray)
+// {
+
+//      for(int i=0; i < myShowArray.Length; i++)
+//     {
+//        Console.Write(myShowArray[i] + " ");
+
+//        if (myShowArray[i] % 2 == 0)
+//        {       
+
+//           if (i % 2 == 1)
+//             {
+//                sumOfElementsInOddPositions += myShowArray[i];                        
+          
+//             }                
+          
+//        }       
+
+//     }
+  
+//     Console.WriteLine();
+//     Console.WriteLine("Сумма элементов, стоящих на нечётных позициях в массиве равна " + sumOfElementsInOddPositions); 
+// }
+
+// Console.Write("Введите размер массива ");
+// int sizeArray = Convert.ToInt32(Console.ReadLine());
+
+// int [] fillingArray = CreatMyArray(sizeArray);
+
+// ShowArray(fillingArray);
+
+// // Задача 36: ---Конец--------------------------------------------------------------
+
+// Задача 38: ---Начало--------------------------------------------------------------
+
+// Задача 38: 
+// Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
+
+Console.WriteLine("Задача 38\n Задайте массив вещественных чисел.\n Найдите разницу между максимальным и минимальным элементов массива.");
 Console.WriteLine();
 Console.WriteLine("Решение");   
 Console.WriteLine();
 
-int [] CreatMyArray  (int size)
+int [] CreatMyArray  (int size, int minValue, int maxValue)
 {
     int[] myArray = new int [size];
     for (int i =0; i < size; i++)
     {
-      myArray[i] = new Random().Next(0, size);
+      myArray[i] = new Random().Next(minValue, maxValue);
 
     }
 
@@ -84,37 +144,45 @@ int [] CreatMyArray  (int size)
 
 }
 
-int sumOfElementsInOddPositions=0;
+int differenceBetweenMaxMinEementsArray = 0;
 
 void ShowArray(int[] myShowArray)
 {
-
+     int maxValue = 0;
+     int minValue = myShowArray[0];
+     
      for(int i=0; i < myShowArray.Length; i++)
     {
        Console.Write(myShowArray[i] + " ");
 
-       if (myShowArray[i] % 2 == 0)
-       {       
+       if (maxValue < myShowArray[i])
+       {  
+        maxValue = myShowArray[i];    
+       }          
 
-          if (i % 2 == 1)
-            {
-               sumOfElementsInOddPositions += myShowArray[i];                        
+       if (minValue > myShowArray[i])
+       {  
+        minValue = myShowArray[i];    
+       }          
           
-            }                
-          
-       }       
-
+       differenceBetweenMaxMinEementsArray = maxValue - minValue;                    
     }
   
     Console.WriteLine();
-    Console.WriteLine("Сумма элементов, стоящих на нечётных позициях в массиве равна " + sumOfElementsInOddPositions); 
+    Console.WriteLine("Максимальное значение эелементов массива равно " + maxValue);
+    Console.WriteLine("Минимальное значение эелементов массива равно " + minValue);  
+    Console.WriteLine("Разность равна " + differenceBetweenMaxMinEementsArray); 
 }
 
 Console.Write("Введите размер массива ");
 int sizeArray = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимальный диапазон массива ");
+int minValueArray = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальный диапазон массива ");
+int maxValueArray = Convert.ToInt32(Console.ReadLine());
 
-int [] fillingArray = CreatMyArray(sizeArray);
+int [] fillingArray = CreatMyArray(sizeArray, minValueArray, maxValueArray);
 
 ShowArray(fillingArray);
 
-// // Задача 36: ---Конец--------------------------------------------------------------
+// Задача 38: ---Конец--------------------------------------------------------------
